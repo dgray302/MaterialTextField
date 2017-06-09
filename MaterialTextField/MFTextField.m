@@ -295,7 +295,7 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
 
 - (BOOL)hasError
 {
-    return self.error.localizedDescription.length > 0;
+    return self.error.length > 0;
 }
 
 - (BOOL)placeholderIsHidden
@@ -590,7 +590,7 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
 
 - (void)updateErrorLabelText
 {
-    self.errorLabel.text = self.error.localizedDescription;
+    self.errorLabel.text = self.error;
     [self.errorLabel sizeToFit];
 }
 
